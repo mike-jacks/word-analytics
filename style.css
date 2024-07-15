@@ -127,6 +127,9 @@ body {
 .stat__number--over-limit {
   color: red;
 }
+.stat__number--at-zero {
+  color: rgb(249, 184, 20);
+}
 @media (max-width: 77em) {
   .stat {
     padding: 1.5rem 1rem;

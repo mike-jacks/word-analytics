@@ -131,6 +131,9 @@ body {
     &--over-limit {
       color: red;
     }
+    &--at-zero {
+      color: rgb(249, 184, 20);
+    }
   }
 
   @media (max-width: $first-stop) {

@@ -10,10 +10,15 @@ const twitterNumberEl = document.querySelector(".stat__number--twitter");
 const facebookNumberEl = document.querySelector(".stat__number--facebook");
 
 function checkCharacterLimit(countElement) {
-  if (countElement.textContent < 0) {
+  if (countElement.textContent <= 10 && countElement.textContent >= 0) {
+    countElement.classList.add("stat__number--at-zero");
+    countElement.classList.remove("stat__number--over-limit");
+  } else if (countElement.textContent < 0) {
     countElement.classList.add("stat__number--over-limit");
+    countElement.classList.remove("stat__number--at-zero");
   } else {
     countElement.classList.remove("stat__number--over-limit");
+    countElement.classList.remove("stat__number--at-zero");
   }
 }
 
